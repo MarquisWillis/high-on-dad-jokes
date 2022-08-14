@@ -1,27 +1,34 @@
 const { Model, DataTypes } = require('sequelize');
-
 const sequelize = require('../config/connection');
 
-class DadJoke extends Model {};
+class Comment extends Model {};
 
-DadJoke.init(
+Comment.init(
     {
-        // define columns of DadJoke model
         id: {
+            type: DataTypes.INTEGER,
             allowNull: false,
             primaryKey: true,
             autoIncrement: true
         },
-        dad_joke_setup: {
-            type: DataTypes.STRING,
+        comment: {
+            type: DataTypes.TEXT,
         },
-        dad_joke_gag: {
+        date_created: {
             type: DataTypes.STRING,
+            defaultValue: DataTypes.NOW
         },
         user_id: {
             type: DataTypes.INTEGER,
             references: {
                 model: 'user',
+                key: 'id'
+            }
+        },
+        dad_joke_id: {
+            type: DataTypes.INTEGER,
+            references: {
+                model: 'dad-joke',
                 key: 'id'
             }
         }
@@ -31,8 +38,8 @@ DadJoke.init(
         timestamps: false,
         freezeTableName: true,
         underscored: true,
-        modelName: 'dad_joke' 
+        modelName: 'comment'
     }
 );
 
-module.exports = DadJoke;
+module.exports = Comment;
