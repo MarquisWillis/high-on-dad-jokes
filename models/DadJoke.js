@@ -12,10 +12,8 @@ DadJoke.init(
             primaryKey: true,
             autoIncrement: true
         },
-        dad_joke_setup: {
-            type: DataTypes.STRING,
-        },
-        dad_joke_gag: {
+
+        dad_joke: {
             type: DataTypes.STRING,
         },
         user_id: {
