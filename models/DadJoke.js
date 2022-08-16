@@ -12,6 +12,7 @@ DadJoke.init(
             primaryKey: true,
             autoIncrement: true
         },
+
         dad_joke: {
             type: DataTypes.STRING,
         },
