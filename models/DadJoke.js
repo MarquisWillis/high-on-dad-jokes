@@ -8,6 +8,7 @@ DadJoke.init(
     {
         // define columns of DadJoke model
         id: {
+            type: DataTypes.INTEGER,
             allowNull: false,
             primaryKey: true,
             autoIncrement: true
