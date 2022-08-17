@@ -15,7 +15,7 @@ Comment.init(
             type: DataTypes.TEXT,
         },
         date_created: {
-            type: DataTypes.STRING,
+            type: DataTypes.DATE,
             defaultValue: DataTypes.NOW
         },
         user_id: {
