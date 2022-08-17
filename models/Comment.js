@@ -28,7 +28,7 @@ Comment.init(
         dad_joke_id: {
             type: DataTypes.INTEGER,
             references: {
-                model: 'dad-joke',
+                model: 'dad_joke',
                 key: 'id'
             }
         }
