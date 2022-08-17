@@ -15,7 +15,7 @@ Comment.init(
             type: DataTypes.TEXT,
         },
         date_created: {
-            type: DataTypes.STRING,
+            type: DataTypes.DATE,
             defaultValue: DataTypes.NOW
         },
         user_id: {
@@ -28,7 +28,7 @@ Comment.init(
         dad_joke_id: {
             type: DataTypes.INTEGER,
             references: {
-                model: 'dad-joke',
+                model: 'dad_joke',
                 key: 'id'
             }
         }
