@@ -4,7 +4,7 @@ const { User, DadJoke, Comment } = require('../models');
 const withAuth = require('../utils/auth');
 
 
-// route for getting homepage ;; DONE (maybe)
+// route for getting homepage ;; DONE 
 router.get('/', async (req, res) => {
     try {
        res.render('homepage') 
@@ -82,11 +82,6 @@ router.get('/jokes/:id', withAuth, async (req, res) => {
 // route for getting create dad jokes page ;; DONE
 router.get('/create', withAuth, async (req, res) => {
     try {
-        if (!req.session.logged_in) {
-            res.redirect('/login');
-            return;
-        }
-
         res.render('add-joke');
     } catch (err) {
         res.status(500).json(err);
