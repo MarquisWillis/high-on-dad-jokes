@@ -4,7 +4,7 @@ const { User, DadJoke, Comment } = require('../models');
 const withAuth = require('../utils/auth');
 
 
-// route for getting homepage ;; DONE (maybe)
+// route for getting homepage ;; DONE 
 router.get('/', async (req, res) => {
     try {
        res.render('homepage') 
