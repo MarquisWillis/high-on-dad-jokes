@@ -82,11 +82,6 @@ router.get('/jokes/:id', withAuth, async (req, res) => {
 // route for getting create dad jokes page ;; DONE
 router.get('/create', withAuth, async (req, res) => {
     try {
-        if (!req.session.logged_in) {
-            res.redirect('/login');
-            return;
-        }
-
         res.render('add-joke');
     } catch (err) {
         res.status(500).json(err);
