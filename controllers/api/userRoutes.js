@@ -2,19 +2,25 @@ const router = require('express').Router();
 const { User } = require('../../models');
 
 // route for creating user (DONT include withAuth)
-router.post('/signup', async (req, res) => {
+// working
+router.post('/', async (req, res) => {
     try {
         const newUserData = await User.create({
             ...req.body,
         })
-        res.status(200).json(newUserData);
-        
+
+        req.session.save(() => {
+            req.session.user_id = newUserData.id
+            req.session.logged_in = true
+            res.status(200).json(newUserData);
+        });       
     } 
     catch (err) {
         res.status(400).json(err);
     }
 });
 
+// working
 router.post('/login', async (req, res) => {
     try {
         // following code checks if email is valid
@@ -23,7 +29,7 @@ router.post('/login', async (req, res) => {
         if (!userData) {
             res
                 .status(400)
-                .json({ message: 'User not found, please try again' })
+                .json({ message: 'User not found, please try again' });
             return;
         }
 
@@ -38,17 +44,18 @@ router.post('/login', async (req, res) => {
             return;
         }
 
-        require.session.save(() => {
+        req.session.save(() => {
             req.session.user_id = userData.id;
             req.session.logged_in = true;
 
-            res.json({ user: userData, message: 'Login Sucessful'})
+            res.json({ user: userData, message: 'Now logged in!'})
         });
     } catch (error) {
         res.status(500).json(err);
     }
 });
 
+// working
 router.post('/logout', (req, res) => {
 
         if (req.session.logged_in) {
