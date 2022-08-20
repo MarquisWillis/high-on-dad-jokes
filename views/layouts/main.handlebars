@@ -14,17 +14,30 @@
     <div>
         <header>
             <h1>
-                <a href="/">High on Dad Jokes!</a>  
+                <a href="/">High on Dad Jokes!</a>
             </h1>
             <nav>
-                <a href="/">Home</a>
-                <a href="/jokes">Jokes</a>
-                {{#if logged_in}}
-                <button class="button is-responsive" id="logout">Logout</button>
-                {{else}}
-                <a href="/login" id="login-btn">Login</a>
-                {{/if}}
+                <div class="tabs is-medium">
+                    <ul>
+                        <li class="is-active">
+                            <a href="/">Home</a>
+                        </li>
+                        <li>
+                            <a href="/jokes">Jokes</a>
+                        </li>
+                        <li>
+                            <a>Create</a>
+                        </li>
+                    </ul>
+                </div>
             </nav>
+             <a>
+                        {{#if logged_in}}
+                        <a>Logout</a>
+                        {{else}}
+                        <a href="/login" id="login-btn">Login</a>
+                        {{/if}}
+                    </a>
         </header>
         <main>
             {{{body}}}
@@ -34,9 +47,9 @@
         </footer>
     </div>
 
-{{#if logged_in}}
-<script src="/js/logout.js"></script>
-{{/if}}
+    {{#if logged_in}}
+    <script src="/js/logout.js"></script>
+    {{/if}}
 </body>
 
 </html>
