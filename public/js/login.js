@@ -44,9 +44,9 @@ if (name && email && password){
 };
 
 document
-    .querySelector('.login')
+    .querySelector('form.form.login-form')
     .addEventListener('submit', loginFormHandler);
 
 document 
-    .querySelector('.jokes')
+    .querySelector('form.form.signup-form')
     .addEventListener('submit', signupForm);
