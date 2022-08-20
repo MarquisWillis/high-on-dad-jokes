@@ -7,7 +7,10 @@ const withAuth = require('../utils/auth');
 // route for getting homepage ;; DONE 
 router.get('/', async (req, res) => {
     try {
-       res.render('homepage') 
+       res.render('homepage', {
+        logged_in: req.session.logged_in
+       }) 
+
     } catch (err) {
         res.status(500).json(err);
     }
@@ -21,8 +24,10 @@ router.get('/login', async (req, res) => {
             res.redirect('/');
             return;
         }
+        // TODO: add single object parameter for add joke
+        res.render('login', {
 
-        res.render('login')
+        })
     } catch (err) {
         res.status(500).json(err);
     }
@@ -79,10 +84,13 @@ router.get('/jokes/:id', withAuth, async (req, res) => {
     }
 });
 
-// route for getting create dad jokes page ;; DONE
+// route for getting create dad jokes page ;; 
 router.get('/create', withAuth, async (req, res) => {
     try {
-        res.render('add-joke');
+        // TODO: add single object parameter for add joke
+        res.render('add-joke', {
+
+        });
     } catch (err) {
         res.status(500).json(err);
     }
