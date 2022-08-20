@@ -41,10 +41,44 @@ const signupForm = async (event) => {
   }
 };
 
+// add signup form handler
+const signupFormHandler = async (e) => {
+    e.preventDefault();
+
+    const name = document.querySelector('#name').value.trim();
+    const email = document.querySelector('#signup-email').value.trim();
+    const password = document.querySelector('#signup-password').value.trim();
+
+    if (name && email && password) {
+        const response = await fetch('/api/user', {
+            method: 'POST',
+            body: JSON.stringify({ name, email, password }),
+            headers: {
+                'Content-Type': 'application/json',       
+            }
+        });
+
+        if (response.ok) {
+            document.location.replace('/')
+        } else {
+            alert(response.statusText);
+        }
+    }
+}
+
 document
+<<<<<<< HEAD
   .querySelector(".signup-form")
   .addEventListener("submit", loginFormHandler);
 
 document
   .querySelector(".login-form")
   .addEventListener("submit", loginFormHandler);
+=======
+    .querySelector('.login-form')
+    .addEventListener('submit', loginFormHandler);
+
+document
+    .querySelector('.signup-form')
+    .addEventListener('submit', signupFormHandler);
+>>>>>>> b4e09ae57c130748387c2f37fad59091601cb8b4
