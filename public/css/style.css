@@ -1,0 +1,23 @@
+* {
+    color: #4a4a4a;
+}
+
+html {
+    background-color: #f9f2ed;
+}
+
+header {
+    height: 100px;
+    background-color: #3ab0ff;
+    font-size: 60px;
+    padding: 5px;
+}
+
+h1 {
+    position: absolute;
+    font-size: x-large;
+}
+
+nav {
+text-align: left;
+}
