@@ -27,3 +27,9 @@ text-align: left;
 #navbar{
     font-size: 30px;
 }
+#create-btn{
+    background-color:rgb(207, 142, 118);
+}
+#search-btn{
+    background-color:rgb(143, 143, 59);
+}
