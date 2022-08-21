@@ -1,3 +1,15 @@
 <div>
     <p>test output for jokes haha</p>
+
+    {{#each dad_jokes as |dad_joke| }}
+        <div>
+            <p>
+                {{dad_joke.id}}.
+                {{dad_joke.dad_joke}}
+            </p>
+        </div>
+    {{/each}}
+    <button id="create-btn"> <a href="/create">Create Joke</a> </button>
 </div>
+
+<script src="./js/jokes"></script>

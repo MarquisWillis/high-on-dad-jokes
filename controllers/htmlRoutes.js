@@ -89,7 +89,7 @@ router.get('/create', withAuth, async (req, res) => {
     try {
         // TODO: add single object parameter for add joke
         res.render('add-joke', {
-
+            
         });
     } catch (err) {
         res.status(500).json(err);
