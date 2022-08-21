@@ -67,7 +67,8 @@ router.get('/jokes/:id', withAuth, async (req, res) => {
                     attributes: ['name']
                 },
                 {
-                    model: Comment
+                    model: Comment,
+                    attributes:['comment']
                 }
             ]
         });
