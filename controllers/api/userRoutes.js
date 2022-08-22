@@ -22,7 +22,7 @@ router.post('/', async (req, res) => {
 
 // working
 router.post('/login', async (req, res) => {
-    try {
+   // try {
         // following code checks if email is valid
         const userData = await User.findOne({ where: { email: req.body.email} });
 
@@ -50,9 +50,9 @@ router.post('/login', async (req, res) => {
 
             res.json({ user: userData, message: 'Now logged in!'})
         });
-    } catch (error) {
-        res.status(500).json(err);
-    }
+    //} catch (error) {
+    //    res.status(500).json(err);
+    //}
 });
 
 // working

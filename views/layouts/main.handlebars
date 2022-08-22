@@ -1,41 +1,79 @@
-<!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>High on Dad Jokes!</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
-</head>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"
+    />
+    <link rel="stylesheet" href="css/style.css" />
 
-<body>
+  </head>
+
+  <body>
     <div>
-        <header>
-            <h1>
-                <a href="/">High on Dad Jokes!</a>  
-            </h1>
-            <nav>
-                <a href="/">Home</a>
-                <a href="/jokes">Jokes</a>
-                {{#if logged_in}}
-                <button class="button is-responsive" id="logout">Logout</button>
-                {{else}}
-                <a href="/login">Login</a>
-                {{/if}}
-            </nav>
-        </header>
-        <main>
-            {{{body}}}
-        </main>
-        <footer>
+      <header>
+        <div class="container is-widescreen" id="title">
+          <strong id="title2">High On Dad Jokes</strong>
+        </div>
+        <nav
+          class="navbar"
+          role="navigation"
+          aria-label="main navigation"
+          id="navbar"
+        >
+          <div class="navbar-brand">
 
-        </footer>
+            <a
+              role="button"
+              class="navbar-burger"
+              aria-label="menu"
+              aria-expanded="false"
+              data-target="navbarBasicExample"
+            >
+              <span aria-hidden="true"></span>
+              <span aria-hidden="true"></span>
+              <span aria-hidden="true"></span>
+            </a>
+          </div>
+
+          <div id="navbarBasicExample" class="navbar-menu">
+            <div class="navbar-start">
+              <a class="navbar-item">
+                <a href="/">Home</a>
+              </a>
+              <a class="navbar-item">
+                <a href="/jokes">Jokes</a>
+              </a>
+              <a class="navbar-item">
+                <a href="/create">Create</a>
+              </a>
+             <a class="navbar-item">
+                  {{#if logged_in}}
+                    <button class="button is-responsive" id="logout">Logout</button>
+                  {{else}}
+                    <a href="/login">Login</a>
+                  {{/if}}
+             </a>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </header>
+      <main>
+        {{{body}}}
+      </main>
+      <footer>
+
+      </footer>
     </div>
 
-{{#if logged_in}}
-<script src="/js/logout.js"></script>
-{{/if}}
-</body>
+    {{#if logged_in}}
+      <script src="/js/logout.js"></script>
+    {{/if}}
+  </body>
 
 </html>
