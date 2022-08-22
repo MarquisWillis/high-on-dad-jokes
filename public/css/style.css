@@ -7,7 +7,6 @@ html {
 }
 
 header {
-    height: 100px;
     background-color: #3ab0ff;
     font-size: 60px;
     padding: 5px;
@@ -21,3 +20,20 @@ h1 {
 nav {
 text-align: left;
 }
+
+#title{
+    background-color: #3ab0ff;
+    text-align: center;
+    border: 3px solid green;
+}
+#title2{
+    border:none;
+}
+#navbar{
+    font-size: 30px;
+}
+#create-btn{
+    background-color:rgb(207, 142, 118);
+}
+#search-btn{
+    background-color:rgb(143, 143, 59);
