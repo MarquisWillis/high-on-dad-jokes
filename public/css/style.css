@@ -12,6 +12,7 @@ header {
     padding: 5px;
 }
 
+<<<<<<< HEAD
 h1 {
     position: absolute;
     font-size: x-large;
@@ -38,4 +39,26 @@ img {
 #search-btn {
     background-color: rgb(143, 143, 59);
     background-color: rgb(143, 143, 59);
+=======
+nav {
+text-align: left;
+}
+
+#title{
+    background-color: #3ab0ff;
+    text-align: center;
+    border: 3px solid green;
+}
+#title2{
+    border:none;
+}
+#navbar{
+    font-size: 30px;
+}
+#create-btn{
+    background-color:rgb(207, 142, 118);
+}
+#search-btn{
+    background-color:rgb(143, 143, 59);
+>>>>>>> 1226ac923092cb1ec380c512a2d3ee0d6f51c37f
 }
