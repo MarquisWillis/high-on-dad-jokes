@@ -13,6 +13,7 @@ header {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 h1 {
     position: absolute;
     font-size: x-large;
@@ -40,6 +41,8 @@ img {
     background-color: rgb(143, 143, 59);
     background-color: rgb(143, 143, 59);
 =======
+=======
+>>>>>>> d042d98ca6e58c39dce045f14204a5a67b32d47e
 nav {
 text-align: left;
 }
@@ -60,5 +63,8 @@ text-align: left;
 }
 #search-btn{
     background-color:rgb(143, 143, 59);
+<<<<<<< HEAD
 >>>>>>> 1226ac923092cb1ec380c512a2d3ee0d6f51c37f
+=======
+>>>>>>> d042d98ca6e58c39dce045f14204a5a67b32d47e
 }
