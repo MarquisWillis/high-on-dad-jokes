@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>High on Dad Jokes!</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div>
+        <header>
+            <img src="images/high on dad jokes logo.png" alt="High on Dad Jokes Logo">
+            <nav>
+                <div class="tabs is-medium">
+                    <ul>
+                        <li class="is-active">
+                            <a href="/">Home</a>
+                        </li>
+                        <li>
+                            <a href="/jokes">Jokes</a>
+                        </li>
+                        <li>
+                            <a href="/create">Create</a>
+                        </li>
+                        <li>
+                            {{#if logged_in}}
+                            <a>Logout</a>
+                            {{else}}
+                            <a href="/login" id="login-btn">Login</a>
+                            {{/if}}
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+        </header>
+        <main>
+            {{{body}}}
+        </main>
+        <footer>
+
+        </footer>
+    </div>
+
+    {{#if logged_in}}
+    <script src="/js/logout.js"></script>
+    {{/if}}
+</body>
+
+</html>

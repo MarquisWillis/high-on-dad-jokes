@@ -18,22 +18,24 @@ h1 {
 }
 
 nav {
-text-align: left;
+    text-align: left;
+    background-color: #3ab0ff;
 }
 
-#title{
-    background-color: #3ab0ff;
-    text-align: center;
-    border: 3px solid green;
+img {
+    width: 200px;
+    height: 100px
 }
-#title2{
-    border:none;
-}
-#navbar{
+
+#navbar {
     font-size: 30px;
 }
-#create-btn{
-    background-color:rgb(207, 142, 118);
+
+#create-btn {
+    background-color: rgb(207, 142, 118);
 }
-#search-btn{
-    background-color:rgb(143, 143, 59);
+
+#search-btn {
+    background-color: rgb(143, 143, 59);
+    background-color: rgb(143, 143, 59);
+}
