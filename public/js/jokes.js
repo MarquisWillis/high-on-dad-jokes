@@ -1,5 +1,5 @@
 // create 2 get requests, one for selecting one by id, and the other for selecting all dad jokes (redirect both to /jokes?)
-
+/*
 async function allDadJokes() {
   const response = await fetch(`/api/dad_jokes`, {
     method: "POST",
@@ -24,3 +24,24 @@ document.addEventListener("DOMContentLoaded", async () => {
     console.log(e);
   }
 });
+*/
+/*const newFormHandler = async (event) => {
+  event.preventDefault();
+
+  const name = document.querySelector('#dad-joke').value.trim();
+
+    const response = await fetch(`/api/jokes`, {
+      method: 'POST',
+      body: JSON.stringify({ dad_joke}),
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    });
+
+    if (response.ok) {
+      document.location.replace('/jokes');
+    } else {
+      alert('Failed to create project');
+    }
+  };
+*/
