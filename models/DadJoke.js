@@ -13,7 +13,7 @@ DadJoke.init(
             primaryKey: true,
             autoIncrement: true
         },
-        joke_text: {
+        dad_joke: {
             type: DataTypes.TEXT,
         },
         user_id: {

@@ -49,7 +49,7 @@ router.get('/jokes', async (req, res) => {
    // }
 });
 // route for getting a single dad joke ;; DONE/*
-/*router.get('/jokes/:id', withAuth, async (req, res) => {
+router.get('/jokes/:id', withAuth, async (req, res) => {
     try {
         const dadJokeData = await DadJoke.findByPk(req.params.id, {
             include: [
@@ -64,16 +64,17 @@ router.get('/jokes', async (req, res) => {
             ]
         });
         const dadJoke = dadJokeData.get({ plain: true });
-        res.render('jokepage', {
+        console.log(dadJoke);
+        res.render('singleJokePage', {
             ...dadJoke,
             logged_in: req.session.logged_in
         });
     } catch (err) {
         res.status(500).json(err);
     }
-});*/
+});
 // route for getting create dad jokes page ;;
-/*router.get('/create', withAuth, async (req, res) => {
+router.get('/create', withAuth, async (req, res) => {
     try {
         // TODO: add single object parameter for add joke
         res.render('add-joke', {
@@ -81,5 +82,5 @@ router.get('/jokes', async (req, res) => {
     } catch (err) {
         res.status(500).json(err);
     }
-});*/
+});
 module.exports = router;
