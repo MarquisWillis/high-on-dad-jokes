@@ -45,7 +45,9 @@ router.get('/jokes', async (req, res) => {
             ]
         });
 
-        const dadJokes = dadJokeData.map((dadJoke) => dadJoke.get({plain : true}));
+        const dadJokes = dadJokeData.map((dadJoke) => 
+            dadJoke.get({plain : true})
+        );
 
         res.render('jokepage', {
             ...dadJokes,
@@ -58,7 +60,7 @@ router.get('/jokes', async (req, res) => {
 });
 
 // route for getting a single dad joke ;; DONE
-router.get('/jokes/:id', withAuth, async (req, res) => {
+router.get('/jokes/:id', async (req, res) => {
     try {
         const dadJokeData = await DadJoke.findByPk(req.params.id, {
             include: [

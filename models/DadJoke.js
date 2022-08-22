@@ -13,8 +13,8 @@ DadJoke.init(
             primaryKey: true,
             autoIncrement: true
         },
-        dad_joke: {
-            type: DataTypes.STRING,
+        joke_text: {
+            type: DataTypes.TEXT,
         },
         user_id: {
             type: DataTypes.INTEGER,
