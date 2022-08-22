@@ -1,13 +1,20 @@
-<div>
-    <p>test output for jokes haha</p>
+<table class="table">
 
-    <section>
-        {{#each dad_joke }}
-        {{> jokepage-details}}
-        {{/each}}
-    </section>
-    <button id="create-btn"> <a href="/create">Create Joke</a> </button>
-</div>
+  <tbody>
+    {{#each dadJokes as |dadJoke|}}
+    <tr>
+      <th>
+        <div class="card">
+          <div class="card-content">
+            <div class="content">
+              {{>jokePage}}
+            </div>
+          </div>
+        </div>
+      </th>
+    </tr>
+    {{/each}}
+  </tbody>
+</table>
 
-
-{{!-- <script src="./js/jokes.js"></script> --}}
+<script src="./js/jokes.js"></script>
