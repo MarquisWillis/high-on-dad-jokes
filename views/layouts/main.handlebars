@@ -13,9 +13,7 @@
 <body>
     <div>
         <header>
-            <h1>
-                <a href="/">High on Dad Jokes!</a>
-            </h1>
+            <img src="/Project_2/project__2/public/images/HIGH ON DAD JOKES.png" alt="High on Dad Jokes Logo" width="100px" height="50px">
             <nav>
                 <div class="tabs is-medium">
                     <ul>
@@ -30,14 +28,15 @@
                         </li>
                     </ul>
                 </div>
+                <button class="button is-danger">
+                    {{#if logged_in}}
+                    <a>Logout</a>
+                    {{else}}
+                    <a href="/login" id="login-btn">Login</a>
+                    {{/if}}
+                </button>
             </nav>
-             <a>
-                        {{#if logged_in}}
-                        <a>Logout</a>
-                        {{else}}
-                        <a href="/login" id="login-btn">Login</a>
-                        {{/if}}
-                    </a>
+
         </header>
         <main>
             {{{body}}}
