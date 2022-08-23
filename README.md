@@ -23,8 +23,8 @@
   As a standard blogging application, a user can navigate through the intuitive navbar to perform desired tasks, such as create a joke, view jokes, and access specific jokes and view their comments
   
 
- ![Homepage for website](/assets/homepage.PNG)
- ![Joke page for website](/assets/jokepage.PNG)
+ ![Homepage for website](./assets/homepage.PNG)
+ ![Joke page for website](./assets/jokepage.PNG)
      
   
   ## Credits
