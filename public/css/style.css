@@ -8,28 +8,54 @@ html {
 
 header {
     background-color: #3ab0ff;
-    font-size: 60px;
     padding: 5px;
 }
 
-nav {
-text-align: left;
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 200px;
+    height: 100px
 }
 
-#title{
-    background-color: #3ab0ff;
-    text-align: center;
-    border: 3px solid green;
+.flex-parent{
+    display: flex;
 }
-#title2{
-    border:none;
+
+.jc-center{
+justify-content: center;
 }
-#navbar{
-    font-size: 30px;
+
+.col-md-6{
+    display: flex;
+    justify-content: center;
 }
-#create-btn{
-    background-color:rgb(207, 142, 118);
+
+.create-form{
+    margin: 30px;
 }
-#search-btn{
-    background-color:rgb(143, 143, 59);
+
+#create-btn {
+    background-color: hsla(0, 90%, 71%, 1);
+    margin: 30px;
+    width: 340px;
+    height: 120px;
+}
+
+#search-btn {
+    background-color: hsla(32, 100%, 69%, 1);
+    margin: 30px;
+    width: 340px;
+    height: 120px;
+}
+
+#login-btn {
+    background-color: hsla(0, 90%, 71%, 1);
+}
+
+#sign-up-box, #login-box{
+    width: 800px;
+    height: 500px;
+    margin: 30px;
 }
