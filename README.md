@@ -16,7 +16,8 @@
   
   ## Installation
   
-  Application link is provided within the README, no prior installation required
+  Application link is provided within the README, no prior installation required:
+  https://project2-mw.herokuapp.com/
    
   ## Usage
   
