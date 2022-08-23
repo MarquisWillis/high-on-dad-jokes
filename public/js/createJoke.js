@@ -1,6 +1,6 @@
 async function createJoke(event) {
   event.preventDefault();
-  alert('create')
+
   //  Get info that we need
   const dad_joke = document.querySelector("#dad_joke").value.trim();
 
