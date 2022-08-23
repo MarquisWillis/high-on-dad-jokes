@@ -1,0 +1,23 @@
+<table class="table">
+
+  <tbody>
+
+    {{#each dadJokes as |dadJoke|}}
+
+    <tr>
+      <th>
+        <div class="card">
+          <div class="card-content">
+            <div class="content">
+              {{>jokePage}}
+            </div>
+          </div>
+        </div>
+      </th>
+    </tr>
+
+    {{/each}}
+  </tbody>
+</table>
+
+<script src="./js/jokes.js"></script>

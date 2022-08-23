@@ -1,0 +1,61 @@
+* {
+    color: #4a4a4a;
+}
+
+html {
+    background-color: #f9f2ed;
+}
+
+header {
+    background-color: #3ab0ff;
+    padding: 5px;
+}
+
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 200px;
+    height: 100px
+}
+
+.flex-parent{
+    display: flex;
+}
+
+.jc-center{
+justify-content: center;
+}
+
+.col-md-6{
+    display: flex;
+    justify-content: center;
+}
+
+.create-form{
+    margin: 30px;
+}
+
+#create-btn {
+    background-color: hsla(0, 90%, 71%, 1);
+    margin: 30px;
+    width: 340px;
+    height: 120px;
+}
+
+#search-btn {
+    background-color: hsla(32, 100%, 69%, 1);
+    margin: 30px;
+    width: 340px;
+    height: 120px;
+}
+
+#login-btn {
+    background-color: hsla(0, 90%, 71%, 1);
+}
+
+#sign-up-box, #login-box{
+    width: 800px;
+    height: 500px;
+    margin: 30px;
+}
