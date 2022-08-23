@@ -25,14 +25,14 @@
                         <li>
                             <a href="/create">Create</a>
                         </li>
-                        <li>
-                            {{#if logged_in}}
-                            <a>Logout</a>
-                            {{else}}
-                            <a href="/login" id="login-btn">Login</a>
-                            {{/if}}
-                        </li>
                     </ul>
+                    <div class="buttons">
+                        {{#if logged_in}}
+                        <button class="button is-responsive" id="login-btn">Logout</button>
+                        {{else}}
+                        <a class="button is-responsive" id="login-btn" href="/login">Login</a>
+                        {{/if}}
+                    </div>
                 </div>
             </nav>
 

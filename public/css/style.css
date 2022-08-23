@@ -8,63 +8,54 @@ html {
 
 header {
     background-color: #3ab0ff;
-    font-size: 60px;
     padding: 5px;
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-h1 {
-    position: absolute;
-    font-size: x-large;
-}
-
-nav {
-    text-align: left;
-    background-color: #3ab0ff;
-}
-
 img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
     width: 200px;
     height: 100px
 }
 
-#navbar {
-    font-size: 30px;
+.flex-parent{
+    display: flex;
+}
+
+.jc-center{
+justify-content: center;
+}
+
+.col-md-6{
+    display: flex;
+    justify-content: center;
+}
+
+.create-form{
+    margin: 30px;
 }
 
 #create-btn {
-    background-color: rgb(207, 142, 118);
+    background-color: hsla(0, 90%, 71%, 1);
+    margin: 30px;
+    width: 340px;
+    height: 120px;
 }
 
 #search-btn {
-    background-color: rgb(143, 143, 59);
-    background-color: rgb(143, 143, 59);
-=======
-=======
->>>>>>> d042d98ca6e58c39dce045f14204a5a67b32d47e
-nav {
-text-align: left;
+    background-color: hsla(32, 100%, 69%, 1);
+    margin: 30px;
+    width: 340px;
+    height: 120px;
 }
 
-#title{
-    background-color: #3ab0ff;
-    text-align: center;
-    border: 3px solid green;
+#login-btn {
+    background-color: hsla(0, 90%, 71%, 1);
 }
-#title2{
-    border:none;
-}
-#navbar{
-    font-size: 30px;
-}
-#create-btn{
-    background-color:rgb(207, 142, 118);
-}
-#search-btn{
-    background-color:rgb(143, 143, 59);
-<<<<<<< HEAD
->>>>>>> 1226ac923092cb1ec380c512a2d3ee0d6f51c37f
-=======
->>>>>>> d042d98ca6e58c39dce045f14204a5a67b32d47e
+
+#sign-up-box, #login-box{
+    width: 800px;
+    height: 500px;
+    margin: 30px;
 }
